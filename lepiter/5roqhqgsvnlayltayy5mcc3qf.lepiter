@@ -1,0 +1,76 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:21:41.711038-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:21:41.711038-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ftUvmt86QD6RMRp0pTQkZg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "**Gt4Security** is a Glamorous Toolkit toolkit for tracking CVEs and security advisories that matter to **mobile** — iOS, Android, mobile apps, and mobile device vendors.\n\nThe goal is to make vulnerability data *moldable*: queryable, inspectable, and pivotable from inside a live GT image, not just a static CSV export.\n\n## Scope\n\n- **iOS / Apple devices** — iPhone OS, iPadOS, firmware advisories\n- **Android platform** — Android Security Bulletins (AOSP, kernel, vendor components)\n- **Device vendors** — Samsung, Google Pixel, Qualcomm, etc.\n- **Mobile app dependencies** — Swift packages, Pub (Flutter/Dart), Maven (Android libraries), npm/PyPI when bundled into RN / Cordova / Kivy apps\n\n## Non-goals (initial)\n\n- Full SBOM generation or binary scanning\n- Exploit authoring / PoC hosting\n- Commercial threat-intel aggregation\n- Anything that requires HTML scraping or paid API access\n\n## Guiding constraints\n\n1. **Free and rate-limit-friendly** — prefer unauthenticated / no-auth endpoints\n2. **Incremental pull** — poll `lastModified` windows; cache results\n3. **Inspectable by default** — every fetched record lands in a domain class with `<gtView>` views\n4. **Small, composable clients** — one client class per data source, mirroring the existing {{gtClass:Gt4CloudflareClient}} / ZnClient pattern\n\n## Related pages\n\n- {{gtPage:Gt4Security — CVE Source Comparison|db=ay32zeq1d68a2o5v8gd9epf14}}\n- {{gtPage:Gt4Security — Architecture|db=ay32zeq1d68a2o5v8gd9epf14}}\n- {{gtPage:Gt4Security — Implementation Plan|db=ay32zeq1d68a2o5v8gd9epf14}}\n- {{gtPage:Gt4Security — Reference Links|db=ay32zeq1d68a2o5v8gd9epf14}}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.960635-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.960635-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — Project Overview"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "e711e050-94d7-4931-8cf6-ad6d6c617261"
+	}
+}

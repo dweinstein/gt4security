@@ -1,0 +1,185 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:25:36.883404-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:25:53.632522-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "w5S295qmRuaNxLV10u0Y2A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Gt4Security is organized as a small set of HTTP client classes that return domain objects, plus a unified cross-source query object. Each source client is independent and composable — following the same shape as {{gtClass:Gt4CloudflareClient}}.\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "blockQuoteSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-04-11T22:25:41.718631-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-04-11T22:25:41.718631-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nNDn/H95TDyNCtyc5Ci/iw=="
+							},
+							"string" : "┌──────────────────────────────────────────────┐\n│  Gt4SecurityQuery   (unified cross-source)   │\n├──────────────────────────────────────────────┤\n│  Gt4SecurityOsvClient   Gt4SecurityNvdClient │\n├──────────────────────────────────────────────┤\n│  Domain: Gt4SecurityVulnerability,           │\n│          Gt4SecurityAdvisory,                │\n│          Gt4SecurityPackageRef,              │\n│          Gt4SecurityVulnerabilityGroup       │\n├──────────────────────────────────────────────┤\n│            ZnClient + NeoJSONReader          │\n└──────────────────────────────────────────────┘"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:25:52.234187-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:25:52.234187-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NJ/tJVSRQyaUyTI/weCixw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Layered design"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:36.39618-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:25:33.618694-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "evgZJ9ZZSC6WCzm56TT0UA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Key classes (planned)\n\n- **`Gt4SecurityOsvClient`** — POST `api.osv.dev/v1/query`, GET `/v1/vulns/{id}`. Methods: `queryAndroidBulletin:`, `queryEcosystem:package:`, `vulnerabilityById:`.\n- **`Gt4SecurityNvdClient`** — GET `services.nvd.nist.gov/rest/json/cves/2.0`. Methods: `cvesModifiedSince:`, `cvesForCpe:`, `cveById:`. Config holds optional API key.\n- **`Gt4SecurityVulnerability`** — normalized record (`id`, `summary`, `severity`, `publishedAt`, `modifiedAt`, `ecosystem`, `affectedPackages`, `references`, `rawSource`).\n- **`Gt4SecurityVulnerabilityGroup`** — uses `TGtGroupWithItems` for an inspectable collection with filter views (by ecosystem, severity, date).\n- **`Gt4SecurityQuery`** — builder-style query that can fan out to OSV + NVD and merge results by CVE id.\n- **`Gt4SecurityExamples`** — `<gtExample>` methods hitting live endpoints with tight assertions (skipped when offline).\n\n## GT views\n\nEvery domain object gets `<gtView>` views for exploration. Minimum set per class:\n\n- `gtVulnerabilitiesFor: aView` — columned list (id, severity, published, ecosystem)\n- `gtAffectedFor: aView` — affected packages / CPEs\n- `gtReferencesFor: aView` — linkified references\n- `gtRawFor: aView` — raw JSON for debugging\n\n## Config\n\nFollow the pattern from other gt4* projects:\n\n- Class-side `Gt4Security class >> default` singleton\n- Instance vars for API keys (NVD), user-agent string\n- Never read secrets from `.envrc` — caller supplies keys via `default nvdApiKey: aString`"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.96452-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.96452-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — Architecture"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "5ef346e3-87f9-4132-8e16-7b3fd1e15e4e"
+	}
+}

@@ -1,0 +1,150 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:21:49.221369-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:21:49.221369-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ntz4vQhSTvOYeOEEVPYK4Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Free, fast, mobile-relevant vulnerability data sources evaluated for Gt4Security. Selection criteria: **free**, **no or generous rate limits**, **daily or near-realtime updates**, **simple REST/JSON**, and **mobile coverage** (iOS, Android platform, mobile app libraries).\n\nSources evaluated:\n\n1. **NVD API v2** — `services.nvd.nist.gov/rest/json/cves/2.0`\n2. **OSV.dev** — `api.osv.dev`\n3. **GitHub Advisory Database** — `api.github.com/advisories`\n4. **CIRCL Vulnerability Lookup** — `vulnerability.circl.lu`\n5. **Vulners** — `vulners.com`\n6. **Android Security Bulletins** — `source.android.com/docs/security/bulletin`\n7. **OSSF Malicious Packages** — `github.com/ossf/malicious-packages` (mirrored into OSV.dev)\n\nSee the comparison table below."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:03.289593-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:03.289593-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u5K9GgnuSQKhIgt/eXl9zA=="
+				},
+				"code" : "| view |\rview := GtPhlowColumnedListView new.\rview items: [ {\r  { 'NVD API v2'. 'Optional key'. '5 req/30s; 50 req/30s with key'. '4'. 'Authoritative CPE coverage for iOS/iPadOS, firmware, vendors (Samsung, Qualcomm, Apple). Ideal for platform/device CVEs.' }.\r  { 'OSV.dev'. 'None'. 'No documented limit'. '5'. 'Dedicated Android ecosystem ingested from Android Security Bulletins since 2020. Also Swift, Pub, Maven, npm, PyPI. Lowest-friction JSON API.' }.\r  { 'GitHub Advisory DB'. 'Token for useful quotas'. '60/hr unauth, 5000/hr authed'. '3'. 'Swift + Pub ecosystems, Maven for Android libs. No iOS/Android platform. Duplicates OSV content.' }.\r  { 'CIRCL'. 'None'. 'Fair-use'. '4'. 'Mirrors NVD + vendor feeds. Good browsing, duplicates NVD.' }.\r  { 'Vulners'. 'API key required'. 'Credit-gated free tier'. '4'. '220+ sources incl. Android. Free tier too restricted for discovery.' }.\r  { 'Android Security Bulletins'. 'None'. 'N/A'. '5 / 1'. 'Content is 5, but HTML-only — no JSON/RSS feed. Use OSV.dev as the JSON proxy.' }.\r  { 'OSSF Malicious Packages'. 'None'. 'N/A (git) or OSV'. '2'. 'Typosquat / credential-steal npm, PyPI, Maven packages. Relevant for bundled libs in RN/Flutter/Cordova apps. Mirrored into OSV.dev.' }\r} ].\rview column: 'Source' text: [ :row | row at: 1 ] weight: 1.1.\rview column: 'Auth' text: [ :row | row at: 2 ] weight: 0.6.\rview column: 'Rate limit' text: [ :row | row at: 3 ] weight: 1.1.\rview column: 'Mobile (1-5)' text: [ :row | row at: 4 ] weight: 0.7.\rview column: 'Notes' text: [ :row | row at: 5 ] weight: 2.2.\rview asElement",
+				"elementHeight" : 260,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:14.609156-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:14.609156-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "495ANKsMRvSDt69iBFiBSw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Recommendation\n\n**Primary CVE sources (integrate first):**\n\n1. **OSV.dev** — Single unauthenticated JSON API with a dedicated `Android` ecosystem (ingested directly from Android Security Bulletins) plus Swift, Maven, and Pub. Zero documented rate limits. Lowest friction for a ZnClient-based tool.\n2. **NVD API v2** — Authoritative CPE-based coverage for iOS / iPadOS and device vendor firmware that OSV's ecosystem model doesn't cleanly express. Free API key gives 50 req / 30s — more than enough for incremental `lastModStartDate` polling.\n\n**Complementary source:**\n\n- **OSSF Malicious Packages (via OSV.dev mirror)** — already reachable through the same `api.osv.dev` client, so it adds malicious-package signal for bundled JS / Python dependencies in mobile apps at **zero integration cost**.\n\n**Skipped and why:**\n\n- **Vulners** — API-key friction, credit-metered free tier\n- **GitHub Advisory DB** — weak mobile platform fit, duplicates OSV for Swift / Pub\n- **CIRCL** — duplicates NVD\n- **Android Bulletins (direct scraping)** — OSV already ingests them in structured form"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.96353-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.96353-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — CVE Source Comparison"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "a512c8b8-b54c-4e19-8a86-af48c5a35df2"
+	}
+}

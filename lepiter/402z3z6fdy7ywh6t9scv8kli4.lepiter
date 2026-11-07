@@ -1,0 +1,563 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:38:59.680659-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:44:36.60208-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "43QGXKkrRN6zE7SEudEcBA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Gt4Security Demo\n\n**Gt4Security** makes mobile vulnerability data *moldable*. It pulls from two free, real-time sources — **OSV.dev** (Android, Swift, Maven, PyPI) and **NVD** (iOS, device firmware, CPE-based) — and merges them into inspectable domain objects you can filter, drill into, and navigate without leaving the GT image.\n\nThis page is a live walkthrough. Every embedded example below fetches real data on first render. Click into any result to start exploring.\n\nKey classes: {{gtClass:Gt4SecurityQuery}}, {{gtClass:Gt4SecurityVulnerabilityGroup}}, {{gtClass:Gt4SecurityVulnerability}}, {{gtClass:Gt4SecurityAffectedEntry}}, {{gtClass:Gt4SecurityQueryResult}}.\n\nFor interactive exploration, see {{gtPage:Gt4Security — Playground|db=ay32zeq1d68a2o5v8gd9epf14}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:08.168853-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T22:51:45.64348-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "chjC114oQFOOBUbNd29Cdw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## 1. Cross-source mobile CVE overview\n\nOne query, two sources (NVD + OSV), deduped by id and alias, post-filtered by date. The result carries **provenance** — you can see how many came from each source, how many were deduplicated, and when the query ran.\n\nUse the **Summary** tab for the rollup, **Vulnerabilities** for the full sorted list, **By ecosystem** for the Android / (CPE-based) split (real OSV ecosystems — npm, PyPI, Maven, Android, … — plus a `(CPE-based)` bucket for NVD entries), **By CPE vendor** for the useful breakdown of CPE-based rows (apple / google / …), **Timeline** for the monthly histogram (click a month to drill into that month's CVEs), and the **refresh** button (↻) to re-run."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:14.96675-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:14.96675-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ylE0nLuRR+OJINwCyvpdlg=="
+				},
+				"exampleSelector" : "demoMobileCveOverview",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "Gt4SecurityQueryExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:23.997671-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:23.997671-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SiegqInhS1GdkLLPVC+13Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## 2. Drilling into a single CVE\n\nClick any row in the Vulnerabilities view above, or inspect the result below directly. This is **CVE-2024-23222** — a well-known WebKit type-confusion bug exploited in the wild (base score 8.8 HIGH).\n\nTry these tabs:\n- **Summary** — id, severity, published/modified, malicious? flag\n- **Affected** — now returns `Gt4SecurityAffectedEntry` objects with parsed CPE (click a row to see vendor/product/version)\n- **References** — click any row to open the URL in your browser\n- **Aliases** — click an alias to look it up in OSV and spawn the related record\n- **🔗 toolbar button** — opens the first advisory URL in your browser"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:29.179317-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:29.179317-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jWuR7HKxSPujPZoqfK5ZgQ=="
+				},
+				"exampleSelector" : "demoSafariCve",
+				"previewHeight" : 350,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "Gt4SecurityNvdExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:38.835886-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:38.835886-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+OtCNBHiRPmpRysbluEKyg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## 3. Malicious package detection\n\nOSV mirrors the **OSSF Malicious Packages** database — reports of typosquats, credential stealers, and backdoored npm/PyPI/Maven packages. These show up inline alongside regular CVEs when you query a package name.\n\nGt4Security detects them via two independent signals: the `MAL-*` id prefix and the `database_specific.malicious-packages-origins` marker. Below is **MAL-2022-4301** — an npm typosquat of `libidn2`.\n\nCheck the **Malicious origins** tab for the reporter metadata, and the **Summary** tab for the `Malicious?: YES` flag."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:44.93708-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:39:44.93708-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1KGVuK5pROa4jFSBoh8DXQ=="
+				},
+				"exampleSelector" : "demoMaliciousPackage",
+				"previewHeight" : 300,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "Gt4SecurityMaliciousExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.845298-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.845298-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OPahYjpyTK6Ph5yHoPHe1w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## 4. Fluent query builder\n\n{{gtClass:Gt4SecurityQuery}} is a composable builder. Build a query, inspect it (the **Configuration** view shows your targets), then click the **▶ Run** toolbar button to execute it and get a full {{gtClass:Gt4SecurityQueryResult}} with provenance.\n\nTry customizing this one:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.855891-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.855891-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4/oZsMBpQ+GJw0RE1isfow=="
+				},
+				"code" : "| query |\nquery := Gt4SecurityQuery new.\nquery mobileOnly.\nquery publishedSince: Date today - 30 days.\nquery severityAtLeast: 7.0.\nquery limit: 50.\nquery \"inspect this — then click the ▶ Run button\""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.869644-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.869644-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Edn2bzFGSMu8q17JE9L84g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## 5. Filter chains stay inspectable\n\nEvery filter on {{gtClass:Gt4SecurityVulnerabilityGroup}} returns another group — so you can chain `.highSeverity`, `.ecosystem:`, `.matching:`, `.malicious` and still get the full set of custom views at each step."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.876477-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.876477-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XAJpgSMrQ/ahbMhoHHvtrw=="
+				},
+				"code" : "((Gt4SecurityNvdClient new latestIosCvesSince: Date today - 60 days)\n\thighSeverity)\n\tmatching: 'kernel'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.887211-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:40:02.887211-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ekZ6J7ZORWCUJsNJ/TPN2A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## What's next\n\n- **Phase 5**: GT home card for one-click access, live Lepiter dashboard page\n- Full project details: {{gtPage:Gt4Security — Project Overview|db=ay32zeq1d68a2o5v8gd9epf14}}\n- Data sources: {{gtPage:Gt4Security — CVE Source Comparison|db=ay32zeq1d68a2o5v8gd9epf14}}\n- Implementation log: {{gtPage:Gt4Security — Implementation Plan|db=ay32zeq1d68a2o5v8gd9epf14}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:39.209068-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:39.209068-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WRHcQVV0TM26MrRznws4NA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## 6. Incident catalog — threats that don't have CVEs\n\nMany mobile security events (EngageLab intent redirection, Pushwoosh espionage, SpinOk spyware, CocoaPods Trunk supply chain) have **no CVE entry** — they're tracked through vendor advisories and threat research. The {{gtClass:Gt4SecurityIncidentGroup}} catalogs 21 of these as inspectable domain objects with drill-through views.\n\nSee the full catalog on {{gtPage:Gt4Security — Mobile SDK & Library Tracker|db=ay32zeq1d68a2o5v8gd9epf14}}."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:31:44.016078-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:31:44.016078-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LlJBFdszQLK/xbqlc5MNig=="
+				},
+				"exampleSelector" : "catalog",
+				"previewHeight" : 350,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "Gt4SecurityIncidentExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-12T09:38:48.129449-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-12T09:38:48.129449-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — Demo"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "dc4dd664-1602-4b40-b77d-3ff96f849a43"
+	}
+}

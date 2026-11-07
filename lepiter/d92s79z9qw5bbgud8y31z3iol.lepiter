@@ -1,0 +1,113 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:21:59.516951-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:21:59.516951-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2LQt6z4qSYW/k5MKyj8KBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:23:15.551095-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:23:15.551095-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "b7xbfO5TQU6VUEOUfZmouQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Primary data sources\n\n- **OSV.dev API docs** — https://google.github.io/osv.dev/api/\n- **OSV.dev Android ecosystem** — https://osv.dev/list?ecosystem=Android\n- **NVD API documentation** — https://nvd.nist.gov/developers/vulnerabilities\n- **NVD rate limits** — https://nvd.nist.gov/developers/start-here#RateLimits\n- **Android Security Bulletins** — https://source.android.com/docs/security/bulletin\n- **Apple security advisories index** — https://support.apple.com/en-us/HT201222\n- **OSSF Malicious Packages** — https://github.com/ossf/malicious-packages\n\n## Background / schemas\n\n- **OSV schema spec** — https://ossf.github.io/osv-schema/\n- **CVE JSON 5 schema (MITRE)** — https://github.com/CVEProject/cve-schema\n- **CPE 2.3 dictionary** — https://nvd.nist.gov/products/cpe\n- **EPSS (Exploit Prediction Scoring System)** — https://www.first.org/epss/\n- **CISA KEV catalog** — https://www.cisa.gov/known-exploited-vulnerabilities-catalog\n\n## Skipped (documented for future re-evaluation)\n\n- **GitHub Advisory DB** — https://docs.github.com/en/rest/security-advisories/global-advisories\n- **CIRCL vulnerability-lookup** — https://www.circl.lu/services/cve-search/\n- **Vulners 2025 access update** — https://vulners.com/blog/access_update_2025/\n\n## GT reference projects\n\n- {{gtClass:Gt4CloudflareClient}} — ZnClient + NeoJSONReader pattern\n- {{gtClass:BaselineOfGt4Cloudflare}} — baseline + loadLepiter pattern\n- {{gtClass:BaselineOfGt4Security}} — this project's baseline"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.966285-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.966285-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — Reference Links"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "55d89b3d-955d-475e-b8ae-b827e93dd8df"
+	}
+}

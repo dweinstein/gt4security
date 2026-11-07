@@ -1,0 +1,665 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:11:18.868399-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:11:18.868399-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BmzrVFUkQKaT8G6FdcAD9A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Goal\n\nAdd an ecosystem-wide query path to {{gtClass:Gt4SecurityOsvClient}}'s world — so calls like \"show me all npm risks in the last 7 days\" or \"last 14 days across npm + PyPI + crates.io\" work **without the caller enumerating packages**.\n\nThe existing {{gtClass:Gt4SecurityOsvClient}} goes through OSV's REST query API (`POST /v1/query`) which **requires a package descriptor**. That means there is no REST-shaped path to \"all npm vulns\" and there never will be — verified against the OSV REST docs, NVD v2 REST docs, and GitHub GraphQL docs on 2026-04-14.\n\nThe OSV project publishes the actual ecosystem-wide data as **bulk feeds on GCS**, and those feeds are the canonical source for ecosystem-level queries."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:11:18.877724-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:14:01.774665-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "H9bnLZ0NTZOTSPg2d6IJmw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# What the 4 candidate APIs actually support\n\nVerified against the OSV REST docs, NVD v2 REST docs, and GitHub GraphQL docs on 2026-04-14. Summary table follows inline; key takeaways:\n\n- OSV REST (`/v1/query`, `/v1/querybatch`) requires a package descriptor — no ecosystem-only path.\n- OSV bulk feed covers the full OSV corpus for every ecosystem, with a `modified_id.csv` for date filtering, and needs no auth.\n- NVD v2 has no ecosystem concept; everything is CPE-shaped.\n- GitHub GraphQL splits the capability: `securityVulnerabilities` has an `ecosystem` argument but no `publishedSince`; `securityAdvisories` has `publishedSince` but no `ecosystem`.\n\n**Implication**: the OSV bulk feed is the only path that covers full OSV + date filtering + ecosystem filtering in one place. GitHub GraphQL is useful as a secondary source (richer severity data for GHSAs) but isn't a replacement."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:17:29.552979-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:17:29.552979-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uxicsRvnSSuKLb4J9t9DNw=="
+				},
+				"code" : "| view |\nview := GtPhlowColumnedListView new.\nview items: [ {\n\t{ 'OSV REST (/v1/query, /v1/querybatch)'. 'no (needs package)'. 'no'. 'none'. 'full OSV corpus per package' }.\n\t{ 'OSV bulk feed (GCS)'. 'YES'. 'YES (via modified_id.csv)'. 'none'. 'full OSV corpus, every ecosystem' }.\n\t{ 'NVD v2 REST'. 'no (no ecosystem concept)'. 'YES (pubStartDate / lastModStartDate)'. 'key-friendly'. 'CPE-shaped only' }.\n\t{ 'GitHub GraphQL securityVulnerabilities'. 'YES (one at a time)'. 'no on this query; securityAdvisories has publishedSince but no ecosystem'. 'token'. 'GHSA subset only' }\n} ].\nview column: 'API' text: [ :row | row first ] weight: 2.\nview column: 'Ecosystem-only?' text: [ :row | row second ] weight: 1.3.\nview column: 'Date filter?' text: [ :row | row third ] weight: 1.6.\nview column: 'Auth?' text: [ :row | row fourth ] weight: 0.7.\nview column: 'Coverage' text: [ :row | row fifth ] weight: 1.5.\nview asElement",
+				"elementHeight" : 200,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:11:18.90303-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:14:01.809727-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QvimJFk4S2ONmR2LOFxA6A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# OSV bulk feed — URLs and sizes (verified 2026-04-14)\n\nBase: `https://storage.googleapis.com/osv-vulnerabilities`\n\n- `/ecosystems.txt` — canonical list (41 ecosystems today: AlmaLinux, Alpine, Android, Bitnami, CRAN, Chainguard, Debian, GHC, GSD, GitHub Actions, Go, Hackage, Hex, Julia, Linux, Maven, NuGet, OSS-Fuzz, Packagist, Pub, PyPI, Red Hat, Rocky Linux, RubyGems, SUSE, SwiftURL, Ubuntu, VSCode, Wolfi, crates.io, Echo, Root, UVI, MinimOS, Mageia, npm, Alpaquita, BellSoft Hardened Containers, CleanStart, GIT, [EMPTY])\n- `/modified_id.csv` — incremental feed, sorted by modification timestamp, format `<ISO timestamp>,<ecosystem>/<ID>`. ~41 MB today.\n- `/<ECOSYSTEM>/all.zip` — full per-ecosystem dump as a zip of `<ID>.json` files.\n- `/<ECOSYSTEM>/<ID>.json` — individual vuln records (a few KB each).\n\nPer-ecosystem zip sizes follow inline. **Design implication**: for \"recent N days\" queries, prefer `modified_id.csv` + per-ID fetch (bounded by the number of recently-changed vulns, not by ecosystem size). Only fall back to `all.zip` when the caller explicitly wants a full dump. For npm specifically (192 MB), never download the full zip by default — require an explicit opt-in flag."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:17:29.557407-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:17:29.557407-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ed4N0JfBRWy+XEZea9nCzw=="
+				},
+				"code" : "| view |\nview := GtPhlowColumnedListView new.\nview items: [ {\n\t{ 'npm'. '192 MB'. 'avoid full-dump path by default' }.\n\t{ 'PyPI'. '21 MB'. 'OK to download' }.\n\t{ 'Maven'. '8.5 MB'. 'OK' }.\n\t{ 'Packagist'. '7.9 MB'. 'OK' }.\n\t{ 'Go'. '7.3 MB'. 'OK' }.\n\t{ 'crates.io'. '2.5 MB'. 'small' }.\n\t{ 'RubyGems'. '2.1 MB'. 'small' }.\n\t{ 'NuGet'. '1.9 MB'. 'small' }.\n\t{ 'Hex'. '97 KB'. 'trivial' }.\n\t{ 'Pub'. '19 KB'. 'trivial' }\n} ].\nview column: 'Ecosystem' text: [ :row | row first ] weight: 1.\nview column: 'Size' text: [ :row | row second ] weight: 1.\nview column: 'Notes' text: [ :row | row third ] weight: 2.\nview asElement",
+				"elementHeight" : 300,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:39.556482-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:39.556482-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "egx+hDGATfuWc0F5wkZpMw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Design: `Gt4SecurityOsvFeedClient` (new class)\n\nA separate client from {{gtClass:Gt4SecurityOsvClient}} because the semantics differ: the REST client is per-package and synchronous; the feed client is ecosystem-level, range-based, and needs caching. Keeping them split avoids polluting the REST API class with bulk-fetch state.\n\n## Ivars\n- `baseUrl` — defaults to `https://storage.googleapis.com/osv-vulnerabilities`\n- `cacheDirectory` — file reference for on-disk cache (default: user temp / `gt4security-osv-feed/`)\n- `cachedModifiedIds` — in-memory parsed view of the latest `modified_id.csv` (row array) with its `Last-Modified` header\n- `history` — list of `Gt4SecurityOsvFeedCall` records (mirror of {{gtClass:Gt4SecurityOsvClient}}'s history pattern) for inspector visibility\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:16.81526-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:40.988856-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mTGO8ddMSgaqfWhszox2Qg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Public API"
+			},
+			{
+				"__type" : "blockQuoteSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:21.248608-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:21.248608-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "te/yNhp4RvaCW+QdZDjUkA=="
+				},
+				"string" : "\"Core: recent changes in an allowlist of ecosystems\"\nfeedClient recentSince: aDate ecosystems: #('npm' 'PyPI' 'crates.io')\n  \"→ Gt4SecurityVulnerabilityGroup\"\n\n\"Convenience: all ecosystems (careful — can be large)\"\nfeedClient recentSince: aDate\n\n\"Full per-ecosystem dump (opt-in for large ones)\"\nfeedClient ecosystemFull: 'crates.io'\nfeedClient ecosystemFull: 'npm' acceptLargeDownload: true\n\n\"Individual lookup — no zip, just one HTTP GET\"\nfeedClient fetchEcosystem: 'npm' id: 'GHSA-xxxx-xxxx-xxxx'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.314086-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T07:22:32.777774-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "n+EZF8CUQSmZGoSZWjQaBA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Private primitives\n- `downloadModifiedIds` — GET `modified_id.csv`, honor `If-Modified-Since` via `Last-Modified` header; cache parsed rows\n- `parseModifiedRow: aRowString` → `{ timestamp. ecosystem. id }` association\n- `fetchEcosystem:id:` → {{gtClass:Gt4SecurityVulnerability}} via a single HTTP GET on `<ECOSYSTEM>/<ID>.json`, parsed through `Gt4SecurityVulnerability fromOsvDictionary:`\n- `downloadEcosystemZip:to:` — write zip to cacheDirectory; return the file reference\n- `unzipAndParse:` — `ZipArchive readFrom:`, decode each entry, parse each JSON, return a group\n\n## Concurrency\n\nFeed fetches are I/O-bound and benefit from parallelism. Use `TKTCommonQueueWorkerPool` (or whatever GT already uses for parallel HTTP) for `recentSince:ecosystems:` to fetch the N individual JSONs concurrently with a small bounded pool (say 8). If GT doesn't expose a clean parallel-HTTP helper, start serial and measure — for \"last 7 days\" the N is typically small enough (low hundreds) that serial is acceptable."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.329863-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.329863-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "f8LO/7EcT/OjkloLmgCq6Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Integration with `Gt4SecurityQuery`\n\n{{gtClass:Gt4SecurityQuery}} already fans out to NVD + OSV per-package. Add a third fan-out lane for feeds:\n\n- `Gt4SecurityQuery >> feedRecentSince: aDate ecosystems: anEcosystemArray` — appends a feed spec to the query (stores as `(since, ecosystems)` pair)\n- `Gt4SecurityQuery >> feedClient` / `feedClient:` — injectable like the other clients\n- `Gt4SecurityQuery >> run` — add the feed fan-out step before dedup\n- {{gtClass:Gt4SecurityQueryResult}} — extend provenance with `feedCount` alongside `nvdCount` / `osvCount`\n\nExample calling pattern:\n\n```\n| q result |\nq := Gt4SecurityQuery new.\nq feedRecentSince: Date today - 7 days\n  ecosystems: #('npm' 'PyPI' 'crates.io').\nq limit: 50.\nresult := q run.\n\"→ Gt4SecurityQueryResult with provenance for all three lanes\"\n```\n\nThe existing id+alias dedup logic already works regardless of source — nothing needs to change there."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.361056-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.361056-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Rbk9AGRPTv+JtApnyf05ag=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Phased delivery plan\n\n## Phase 1 — Primitives + `modified_id.csv` parsing\n\nDeliverables:\n- {{gtClass:Gt4SecurityOsvFeedClient}} class with `baseUrl`, `cacheDirectory`, `history` ivars and default initializer\n- `downloadModifiedIds` — ZnClient GET with Last-Modified caching to disk\n- `parseModifiedIds:` — returns an `OrderedCollection` of `{ timestamp. ecosystem. id }` associations\n- `fetchEcosystem:id:` — single-vuln GET, parse through `Gt4SecurityVulnerability fromOsvDictionary:`\n- `<gtExample>` methods covering: CSV parse with synthetic input (offline), Last-Modified round-trip (offline), and a live single-vuln lookup (`<noTest>`)\n- GT Summary view showing cache state, row count, last fetch time\n\n**Definition of done**: `Gt4SecurityOsvFeedClient new fetchEcosystem: 'npm' id: 'GHSA-xxxx-xxxx-xxxx'` returns a parsed vuln.\n\n## Phase 2 — `recentSince:ecosystems:` aggregator\n\nDeliverables:\n- `recentSince:ecosystems:` — parses cached `modified_id.csv`, filters by `timestamp > cutoff` and `ecosystem in allowlist`, fans out to `fetchEcosystem:id:`, wraps in a {{gtClass:Gt4SecurityVulnerabilityGroup}}\n- `recentSince:` — convenience that passes the full ecosystems list\n- Offline `<gtExample>` using a stub feed client that returns canned rows + canned JSONs\n- Live `<gtExample>` `<noTest>` for last 7 days npm\n- Progress reporting: use a `GtJob` wrapper so long fetches show a progress bar in the inspector\n\n**Definition of done**: `Gt4SecurityOsvFeedClient new recentSince: Date today - 7 days ecosystems: #('npm' 'PyPI')` returns a non-empty group in under a minute; result group's existing `gtByEcosystemFor:` shows real ecosystem breakdown (npm: N, PyPI: M).\n\n## Phase 3 — Full-dump path `ecosystemFull:`\n\nDeliverables:\n- `downloadEcosystemZip:` — writes `<eco>/all.zip` to cache, keyed by ETag\n- `ecosystemFull:` — unzips via `ZipArchive readFrom:`, parses each entry, returns a group\n- `ecosystemFull:acceptLargeDownload:` — npm-size guard; requires explicit opt-in\n- `<gtExample>` live on crates.io (2.5 MB, quick) `<noTest>`\n- Size guard threshold configurable; default 50 MB\n\n**Definition of done**: full crates.io dump parses into a group of ~700 vulns with correct ecosystems.\n\n## Phase 4 — `Gt4SecurityQuery` integration + demo\n\nDeliverables:\n- `Gt4SecurityQuery >> feedRecentSince:ecosystems:`\n- `Gt4SecurityQuery >> feedClient:` / `feedClient`\n- Extend {{gtClass:Gt4SecurityQueryResult}} with `feedCount` + provenance view updates\n- Live demo example `Gt4SecurityQueryExamples >> feedScanWeek` — \"last 7 days across npm + PyPI + crates.io\"\n- A Playground cell on the Playground page demonstrating the feed path\n- Update the Demo page's cross-source overview to mention feed source\n\n**Definition of done**: `Gt4SecurityQueryExamples new feedScanWeek` returns a `Gt4SecurityQueryResult` where `feedCount + nvdCount + osvCount = total`.\n\n## Phase 5 (optional) — GitHub GraphQL client\n\nOnly if Phase 1-4 prove insufficient for some use case (e.g. richer severity/patch metadata). Lower priority — the OSV feed already covers everything GHSA publishes to OSV. Skip unless there's a concrete gap."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.396221-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.396221-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AtfsedlTQmOJcOL2n5XAwg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Edge cases and gotchas to watch for\n\n- **`modified_id.csv` grows unbounded** — today ~41 MB, ever-growing. Cache it to disk; only re-GET when `Last-Modified` changes (or on explicit refresh). Do NOT re-download per call.\n- **Timestamps are modification, not publication** — a recent row means the record was *touched* (possibly a metadata fix). If the caller wants strictly \"newly disclosed\", filter the resulting group by `v published > cutoff` after fetching, not by CSV timestamp alone.\n- **[EMPTY] row in `ecosystems.txt`** — literally one of the entries. Filter it out in the ecosystems list.\n- **CPE-shaped vulns**: the OSV feed does NOT contain CPE-only entries — those are NVD's domain. Ecosystem feeds are OSV-native, so the `Gt4SecurityVulnerability >> hasCpeAffected` predicate will be `false` for all feed results. That's expected.\n- **Malicious package records** ride inline in npm/PyPI/etc. feeds — they'll appear naturally in results; the existing `malicious` / `benign` filters on {{gtClass:Gt4SecurityVulnerabilityGroup}} already handle them.\n- **`ZipArchive readFrom:`** expects a `ReadStream` on bytes — use a binary read stream on the downloaded zip file, not a text stream.\n- **HTTP failure modes**: `modified_id.csv` or individual JSONs may 404 if the ID was withdrawn. Log + skip, don't crash the whole sweep.\n- **Rate limiting**: GCS has no documented per-IP rate limit for public buckets, but being polite — cap concurrent fetches to 8 and back off on 429/5xx."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.410686-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-14T23:12:25.410686-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fB2YFTQDTayg/soHVl9UFw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Test strategy\n\n**Offline (CI-safe)**:\n- Synthetic `modified_id.csv` parsing (`<gtExample>`)\n- Stub feed client returning canned rows + canned JSONs, exercising `recentSince:ecosystems:`\n- Zip parse from a fixture file with 3 synthetic vuln JSONs inside\n- `Gt4SecurityQuery >> feedRecentSince:ecosystems:` with an injected stub feed client\n\n**Live (`<noTest>`)**:\n- Single-vuln lookup on a well-known GHSA id\n- Actual `modified_id.csv` fetch + row count assertion (> 0)\n- Last 7 days npm live, asserts all returned vulns have `primaryEcosystem = 'npm'`\n- Cross-ecosystem (npm + PyPI + crates.io) last 7 days\n- Full crates.io dump (small enough for occasional live runs)\n\nAll offline `<gtExample>`s must pass in the same sweep we use today (33 currently)."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:06.579641-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:06.579641-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "A/3gF9JzSvife3CpWIlayw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Findings (2026-04-15)\n\nThe plan above was written from research; what follows is grounded in delivered, committed code.\n\n## ZIP64 is real, and it's a blocker\n\nPharo's {{gtClass:ZipArchive}} cannot seek into ZIP64 archives. Confirmed empirically: npm's `all.zip` today has **217,363 entries** and uses ZIP64 sentinels (`0xFFFFFFFF`) in the classic End-of-Central-Directory record. `ZipArchive>>#readEndOfCentralDirectoryFrom:` reads those fields as 32-bit unsigned ints and then computes `stream position: eocdPosition - centralDirectorySize`, which with size=4294967295 goes negative — the `setPosition:to:` primitive refuses it. Image grep: zero methods/classes containing \"64\" in the archive machinery. We decided *not* to upstream-patch Pharo ZipArchive; the subprocess wrapper is cleaner for our scope.\n\n## Native unzip is the right answer, and it was painless\n\n{{gtClass:Gt4SecurityUnzipTool}} wraps `/usr/bin/unzip` (Info-ZIP v6, ZIP64-aware) via {{gtClass:GtSubprocessWithInMemoryOutput}} — the same infrastructure used by {{gtClass:GtAwsClient}}, {{gtClass:GtLSPRustModel}}, etc. Zip Slip is structurally neutralized on single-entry reads because `unzip -p` writes to stdout (our choice of destination) instead of the filesystem; entry-name allowlist regex is only defense-in-depth. Single-entry extract measures ~113 ms; listing all entries on the 192 MB npm zip takes ~3 s. Bulk extract via `unzip -o -d` works but is slow-by-design (210K small file writes + reads) — we don't use it as a primary path.\n\n## GT has a full async framework — use it\n\n{{gtClass:AsyncJoinAllFuture}} + {{gtClass:AsyncFutureExecutionConfiguration}} with `customGroup:` and `maxAmountOfWorkers:` gives us bounded concurrency without homebuilt pools. We validated the pattern with a 20-fetch-cap-4 test (534 ms elapsed, ~4.2x speedup over 2260 ms serial — the cap held exactly). The ergonomics are clean: wrap a block in `asAsyncFuture`, schedule via `await: config`, collect results with `wait`. Error model: default `AsyncNoneErrorHandler` stores rejections as the promise's value rather than re-raising — caller-side `isKindOf: Error` check per result. We retired {{gtMethod:Gt4SecurityOsvFeedClient>>#fetchVulnsFromRows:concurrency:}}'s SharedQueue + Mutex + manual fork plumbing. Same parity on npm 7-day fetch (323 vulns, 152 malicious, 171 GHSA) but faster (9s vs 15s — pool reuse).\n\n## Final architecture (committed)\n\nOSV bulk feed is the canonical path for ecosystem-wide queries; the REST API is per-package and can't answer \"all npm in last 90 days\". Within the bulk feed we split by query shape:\n\n- **Date-bounded** (`recentModifiedSince:ecosystem:concurrency:`) → filter `modified_id.csv` for matching rows, fan out individual JSON fetches in parallel via async futures with concurrency 16. Works on every ecosystem including ZIP64.\n- **Full dump** (`ecosystemFull:`) → try Pharo {{gtClass:ZipArchive}} first (fast, in-memory); fall back to `Gt4SecurityUnzipTool extractAllTo:from:` on error (handles ZIP64). Tmpdir per call, `ensure:` cleanup.\n- **Single entry from cached zip** — primitive `Gt4SecurityUnzipTool contentsOfEntry:in:` — structurally safe, ~113 ms, no HTTP.\n\nAll wired into {{gtClass:Gt4SecurityQuery}} via `feedEcosystem:` — when `publishedSince:` is set, routes through the date-bounded path; otherwise the full-dump path."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:31.297442-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:31.297442-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YD0BiWbDS6KhHyBHvx1pDQ=="
+				},
+				"code" : "| view |\nview := GtPhlowColumnedListView new.\nview items: [ {\n\t{ 'Date-bounded query' . 'modified_id.csv + per-ID fetch' . 'Every ecosystem, incl. ZIP64 (npm, ...)' . 'AsyncJoinAllFuture + bounded pool @ 16' }.\n\t{ 'Full ecosystem dump' . 'ZipArchive (fast) with unzip fallback' . 'Small: direct; large/ZIP64: subprocess tmpdir extract' . 'Single-process unzip, iterate files' }.\n\t{ 'Single entry (cached zip)' . 'Gt4SecurityUnzipTool contentsOfEntry:in:' . '~113ms, structurally safe (stdout only)' . 'Sync; wrap with asAsyncForkedFuture for parallel' }\n} ].\nview column: 'Query shape' text: [ :row | row first ] weight: 1.3.\nview column: 'Path' text: [ :row | row second ] weight: 2.\nview column: 'Applicability' text: [ :row | row third ] weight: 2.2.\nview column: 'Concurrency' text: [ :row | row fourth ] weight: 1.8.\nview asElement",
+				"elementHeight" : 210,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:06.599465-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:06.599465-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KzPk3wjbSnGAdaiLwUVObQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Mobile-ecosystem deliverable (live data)\n\n`Gt4SecurityQueryExamples new mobileFeedLast90Days` run on 2026-04-15. 9,127 per-ID HTTP fetches across the mobile-relevant OSV ecosystems, 249 s end-to-end, 0 errors, 200 cross-ecosystem duplicates deduped, 3,740 final vulnerabilities (published within the last 90 days) across 2,582 unique packages.\n\nPer-ecosystem breakdown follows as an inline table.\n\nTop-line observations:\n- **npm dominates** (3,181 / 85% of the mobile attack surface) — the React Native / Expo / Capacitor / Cordova / Ionic / NativeScript cluster. Of those, **60% are MAL-* malicious-package reports** (single-use attacker packages, flat distribution of 1 report per package).\n- **Android platform ids modify often, publish rarely** — 3,261 rows were modified in the window but only 121 are freshly published. Most modifications are metadata updates to older CVEs (new Pixel patch levels, added vendor backports).\n- **Maven = enterprise-backend territory**: Keycloak (27), Tomcat (13+12+12), ActiveMQ (5). Relevant to apps with embedded Java or Java backends.\n- **NuGet `Magick.NET` wave**: one library's build variants took 85-87 advisories each in a concentrated window — interesting anomaly worth a second look.\n- **Swift/Flutter are effectively quiet** (6 SwiftURL + 1 Pub). Either real scarcity or under-reporting into OSV.\n\nReproducible via: `Gt4SecurityQueryExamples new mobileFeedLast90Days`. First run downloads `modified_id.csv` (~40 MB) to the local cache at `FileLocator temp / gt4security-osv-feed /`; subsequent runs reuse the cache, so repeat runs of the example complete in 3-5 minutes."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:31.298002-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-15T13:40:31.298002-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GVhv/IxwSSCrIyglSyU+cg=="
+				},
+				"code" : "| view |\nview := GtPhlowColumnedListView new.\nview items: [ {\n\t{ 'npm'       . '3181'. '1910'. '1271'. 'React Native / Expo / Capacitor / Cordova / Ionic / NativeScript' }.\n\t{ 'Maven'     . '198'.  '0'.    '198'.  'Android Java / Kotlin libraries' }.\n\t{ 'NuGet'     . '146'.  '11'.   '135'.  'Xamarin / .NET MAUI / Unity' }.\n\t{ 'Android'   . '121'.  '0'.    '0'.    'Android Security Bulletin platform advisories (ASB-A-*)' }.\n\t{ 'RubyGems'  . '84'.   '23'.   '61'.   'Fastlane / CocoaPods tooling' }.\n\t{ 'SwiftURL'  . '6'.    '0'.    '6'.    'iOS Swift Package Manager' }.\n\t{ 'Pub'       . '1'.    '0'.    '1'.    'Flutter / Dart' }\n} ].\nview column: 'Ecosystem' text: [ :row | row first ] weight: 0.8.\nview column: 'Total' text: [ :row | row second ] weight: 0.5.\nview column: 'MAL-*' text: [ :row | row third ] weight: 0.5.\nview column: 'GHSA-*' text: [ :row | row fourth ] weight: 0.5.\nview column: 'Relevance' text: [ :row | row fifth ] weight: 3.\nview asElement",
+				"elementHeight" : 230,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-14T23:10:45.2525-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-14T23:10:45.2525-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — OSV Bulk Feed Plan"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "5db2f851-65fa-4917-88e3-9137730448eb"
+	}
+}

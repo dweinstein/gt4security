@@ -1,0 +1,113 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:29.001575-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:22:29.001575-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mjZC8WjZRgWc107LOh+lnA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T22:23:04.451913-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-11T23:13:03.441388-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1xVDvnBTRLuyIQvx73xc4Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Phased plan. Each phase ends in something inspectable in GT — even if incomplete. No phase should land without at least one `<gtExample>` method exercising real data.\n\n## Phase 1 — OSV client (Android-first) ✅ landed 2026-04-11 (`319bdd4`)\n\n4 live examples, ZnClient + NeoJSONReader, OSV parser, `Gt4SecurityVulnerability` domain class with 5 GT views.\n\n## Phase 2 — NVD client (iOS + firmware) ✅ landed 2026-04-11 (`47d881e`, `223486f`)\n\n5 live examples, rate limiter (per-instance), CVSS v3.1/v3.0/v2 metrics, CPE normalized to `ecosystem: 'NVD-CPE'`, `latestIosCvesSince:` convenience.\n\n## Phase 3 — Group + cross-source query ✅ landed 2026-04-11 (`288fe68`)\n\n4 examples (1 synthetic + 3 live). `Gt4SecurityVulnerabilityGroup` with `TGtGroupWithItems`, type-preserving filters, 4 GT views. `Gt4SecurityQuery` fluent builder with id+alias dedup and post-filters.\n\n## Phase 4 — Malicious packages (complementary) ✅ landed 2026-04-11 (`1f511c4`)\n\nGoal: surface bundled-library risk via OSSF Malicious Packages, mirrored into OSV.\n\n- [x] Probed OSV for the shape: malicious records live **inline** in regular package queries. Identified two independent detection signals:\n  - `id` beginning with `MAL-` (OSSF convention — e.g. `MAL-2022-4301`)\n  - `rawJson.database_specific.malicious-packages-origins` (reporter metadata)\n- [x] `Gt4SecurityVulnerability >> isMalicious` — either-signal predicate\n- [x] `Gt4SecurityVulnerability >> maliciousOrigins` — returns the origins array or `#()`\n- [x] `Gt4SecurityVulnerabilityGroup >> malicious` / `benign` — type-preserving filters\n- [x] `Gt4SecurityOsvClient >> queryMaliciousEcosystem:package:` — convenience wrapping `queryEcosystem:package:` + `malicious` filter\n- [x] **Malicious status surfaced in views**: vulnerability `gtSummaryFor:` now shows a `Malicious?` row; group `gtVulnerabilitiesFor:` now has a `Kind` column (`MALICIOUS` vs `CVE`); group `gtSummaryFor:` adds a `Malicious` rollup entry\n- [x] New `Gt4SecurityVulnerability >> gtMaliciousOriginsFor:` view — appears only when the record is malicious (returns `aView empty` otherwise)\n- [x] **4 examples in `Gt4SecurityMaliciousExamples`**: `lookupKnownMalById`, `queryNpmMaliciousPackage`, `mixedQuerySplitsByKind`, `detectViaDatabaseSpecific` (synthetic regression for the non-MAL-id detection path) — all passing\n\n**Full suite: 17/17 examples pass across Phases 1-4.**\n\nNot done in Phase 4 (deliberately deferred — see review notes after this phase):\n- Surfacing malicious detection in `Gt4SecurityQuery` builder (no `maliciousOnly` yet)\n- Wrapping `malicious-packages-origins` entries in a dedicated `Gt4SecurityMaliciousOrigin` domain object\n- Ability to fan out to multiple malicious-package package queries in one shot\n\n## Phase 5 — Moldable dashboards\n\nGoal: make the image a useful mobile-CVE operations center.\n\n- [ ] Lepiter page: live \"Mobile CVE Weekly Dashboard\" using example snippets of `Gt4SecurityQuery` runs\n- [ ] `Gt4Security class >> homeCard` — add to GT home for one-click access\n- [ ] Optional: persist recent query results to disk for offline review"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.965434-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-11T22:21:12.965434-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — Implementation Plan"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f2773441-3915-46a6-8bd5-3ec337809129"
+	}
+}

@@ -1,0 +1,884 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:51:58.14383-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:51:58.14383-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kZD+PK45RVa+7v8p7dFkMA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Mobile SDK & Library Vulnerability Tracker\n\nMobile apps bundle dozens of third-party SDKs and native libraries. Each is a potential attack surface — either through **known CVEs** (e.g., the OpenSSL Heartbleed class, Log4Shell in Java-based Android apps) or **malicious package reports** (typosquats, supply chain compromises catalogued by OSSF).\n\nThis page catalogs the libraries we can track with Gt4Security, shows live vulnerability data for each, and documents known malicious SDKs relevant to mobile.\n\nRelated: {{gtPage:Gt4Security — Demo|db=ay32zeq1d68a2o5v8gd9epf14}} | {{gtPage:Gt4Security — CVE Source Comparison|db=ay32zeq1d68a2o5v8gd9epf14}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:14.269294-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:14.269294-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/xo3RjERQfqeOtPnan8GLQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Data availability by ecosystem\n\nNot all package ecosystems are equally well-covered. Here's what we verified against live APIs:"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:14.293496-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:14.293496-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PcqNHCF7QYSujESPFut6kw=="
+				},
+				"code" : "| view |\rview := GtPhlowColumnedListView new.\rview items: [ {\r  { 'OpenSSL'. 'NVD CPE'. 'NVD'. '5+'. '—'. 'TLS in virtually all apps; bundled as native lib' }.\r  { 'SQLite'. 'NVD CPE'. 'NVD'. '5+'. '—'. 'Core to both iOS and Android OS' }.\r  { 'libcurl'. 'NVD CPE'. 'NVD'. '5+'. '—'. 'HTTP client bundled in native code' }.\r  { 'libwebp'. 'NVD CPE'. 'NVD'. '5+'. '—'. 'Image decoding; CVE-2023-4863 was critical zero-click' }.\r  { 'OkHttp'. 'Maven'. 'OSV'. '2'. '0'. 'Default Android HTTP client (Gradle)' }.\r  { 'Retrofit'. 'Maven'. 'OSV'. '2'. '0'. 'Popular Android REST client' }.\r  { 'log4j-core'. 'Maven'. 'OSV'. '9'. '0'. 'Log4Shell (CVE-2021-44228); Android apps using Java logging' }.\r  { 'GSON'. 'Maven'. 'OSV'. '1'. '0'. 'Google JSON parser, bundled in most Android apps' }.\r  { 'axios'. 'npm'. 'OSV'. '12'. '1'. 'HTTP client in React Native / Cordova apps; MAL-2026-2307 is a confirmed malicious entry' }.\r  { 'node-forge'. 'npm'. 'OSV'. '15'. '0'. 'Crypto lib bundled in RN / Cordova apps' }.\r  { 'lodash'. 'npm'. 'OSV'. '10'. '0'. 'Utility lib, ubiquitous in JS-based mobile apps' }.\r  { 'event-stream'. 'npm'. 'OSV'. '1'. '0'. 'Famous 2018 supply chain attack targeting cryptocurrency wallets' }.\r  { 'requests'. 'PyPI'. 'OSV'. '13'. '0'. 'Python HTTP; Kivy / BeeWare mobile apps' }.\r  { 'cryptography'. 'PyPI'. 'OSV'. '28'. '0'. 'Python TLS bindings; bundled in toolchains' }.\r  { 'Pillow'. 'PyPI'. 'OSV'. '113'. '0'. 'Image processing; used by mobile backend pipelines' }.\r  { 'dio'. 'Pub'. 'OSV'. '1'. '0'. 'Flutter HTTP client' }.\r  { 'http'. 'Pub'. 'OSV'. '1'. '0'. 'Dart HTTP client (Flutter)' }.\r  { 'openssl (crate)'. 'crates.io'. 'OSV'. '20'. '0'. 'Rust OpenSSL bindings; Rust-based mobile tools' }\r} ].\rview column: 'Library' text: [ :row | row at: 1 ] weight: 1.4.\rview column: 'Ecosystem' text: [ :row | row at: 2 ] weight: 0.8.\rview column: 'Source' text: [ :row | row at: 3 ] weight: 0.6.\rview column: 'CVEs' text: [ :row | row at: 4 ] weight: 0.4.\rview column: 'MAL' text: [ :row | row at: 5 ] weight: 0.4.\rview column: 'Mobile relevance' text: [ :row | row at: 6 ] weight: 2.\rview asElement",
+				"elementHeight" : 450,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:25.745855-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:25.745855-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gxRq2niYQXuNSOF9rF1hMw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Not trackable (yet)\n\n- **Pushwoosh** — Russian-linked push notification SDK found in US government/military apps (2022 Reuters investigation). Not a CVE — it's a privacy/espionage concern. No entry in NVD or OSV.\n- **Alamofire / AFNetworking** (Swift/CocoaPods) — OSV doesn't support CocoaPods or Swift ecosystems. NVD has no CPE for these. Would need scraping Apple security advisories.\n- **Firebase** — Google's SDK. Not in OSV Maven; CVEs are tracked under Google's Android Security Bulletins (reachable via our OSV Android ecosystem queries, not per-package).\n- **Mintegral / X-Mode / Igexin** — Ad/analytics SDKs flagged for data exfil or click fraud. Not tracked as CVEs; these are policy violations, not code vulnerabilities."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:53.042-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:53.042-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BG7LJZ3ORvCMmctnDzyjFg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Known malicious SDKs and supply chain incidents (mobile-relevant)\n\nThese are **confirmed incidents** — SDKs or libraries that were either built malicious from the start, compromised via supply chain attacks, or caught exfiltrating data beyond their stated purpose."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:53.055643-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:52:53.055643-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RnfrGFAnQYG5LtarT7CY0w=="
+				},
+				"code" : "| view |\rview := GtPhlowColumnedListView new.\rview items: [ {\r  { 'Pushwoosh'. '2022'. 'iOS, Android'. 'Espionage'. 'Russian company masquerading as US-based; push SDK embedded in CDC, US Army apps. Reuters exposé. No CVE issued — privacy/deception concern.' }.\r  { 'Igexin'. '2017'. 'Android'. 'Spyware'. 'Chinese ad SDK downloaded spyware payloads post-install in 500+ Play Store apps. Lookout discovery.' }.\r  { 'Mintegral'. '2020'. 'iOS'. 'Click fraud / data exfil'. 'Chinese ad SDK intercepted ad clicks and URL scheme traffic. Snyk (SourMint) report. Apple took no action.' }.\r  { 'X-Mode / Outlogic'. '2020'. 'iOS, Android'. 'Data harvesting'. 'Location data broker SDK embedded in prayer and weather apps; sold location data to US military contractors. Banned by Apple and Google.' }.\r  { 'OneAudience'. '2019'. 'Android'. 'Data harvesting'. 'SDK harvested Facebook user data beyond authorized scope. Facebook banned it.' }.\r  { 'event-stream (npm)'. '2018'. 'RN / Cordova'. 'Supply chain'. 'Maintainer handed off to attacker who injected a Bitcoin wallet stealer targeting Copay mobile wallet. OSV: 1 entry.' }.\r  { 'ua-parser-js (npm)'. '2021'. 'RN / Cordova'. 'Supply chain'. 'Legitimate npm package (7M weekly downloads) compromised; published versions contained crypto miners and credential stealers.' }.\r  { 'node-ipc (npm)'. '2022'. 'RN / Cordova'. 'Sabotage'. 'Maintainer added destructive code targeting Russian/Belarusian IP addresses (protestware). Wiped files on affected systems.' }.\r  { 'axios (npm)'. '2026'. 'RN / Cordova'. 'Malicious'. 'MAL-2026-2307 — malicious code detected in axios package. Live in OSV.' }.\r  { 'SourMint (Mintegral)'. '2020'. 'iOS'. 'Click fraud'. 'Snyk''s name for the Mintegral SDK incident. Affected 1,200+ iOS apps with 300M+ monthly installs.' }.\r  { 'Tekya / Haken'. '2020'. 'Android'. 'Clicker malware'. 'Malware families hidden in 56 Play Store apps (camera/file utilities). Auto-clicked ads in background. Check Point discovery.' }.\r  { 'Baidu SDK'. '2015-2020'. 'Android'. 'Data exfil'. 'Multiple incidents of Baidu mobile SDKs (Maps, Search, Moplus) leaking IMEI, location, search queries. Trend Micro reports.' }.\r  { 'AirPush'. '2012-2015'. 'Android'. 'Adware'. 'Aggressive ad SDK pushing notifications and injecting bookmarks. Embedded in thousands of free apps.' }\r} ].\rview column: 'Name' text: [ :row | row at: 1 ] weight: 1.2.\rview column: 'Year' text: [ :row | row at: 2 ] weight: 0.5.\rview column: 'Platform' text: [ :row | row at: 3 ] weight: 0.7.\rview column: 'Type' text: [ :row | row at: 4 ] weight: 0.7.\rview column: 'What happened' text: [ :row | row at: 5 ] weight: 3.\rview asElement",
+				"elementHeight" : 420,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:00.900382-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:00.900382-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7VMO72R2RdWsCbAuQ7utKQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Live: Cross-ecosystem mobile SDK scan\n\nThis example queries NVD (OpenSSL, SQLite, libcurl, libwebp) and OSV (OkHttp, Retrofit, log4j, axios, node-forge, dio) for CVEs published in the last 120 days. Deduped across sources. Click into the result to explore by ecosystem, severity, or timeline."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:07.555907-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:07.555907-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WSKnh1eIT5umWcMkFrBR+g=="
+				},
+				"exampleSelector" : "demoMobileSdkScan",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "Gt4SecurityQueryExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.317824-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.317824-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QJSAonWoRkK9NlNwMrSKww=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Check a specific package\n\nSwap the ecosystem and package name below to check any library your app bundles. The group result shows CVEs **and** malicious reports in one view — use the `Kind` column to distinguish them."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.325001-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.325001-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "S2go/3n7S8GUm/h9AyGd/A=="
+				},
+				"code" : "\"Change these to check your own dependency.\"\nGt4SecurityOsvClient new\n\tqueryEcosystem: 'npm'\n\tpackage: 'axios'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.336983-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.336983-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MmkAmwO7Qvm7aUgmmXLzEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Check a native library via NVD CPE\n\nFor C/C++ libraries bundled as native code (OpenSSL, libcurl, SQLite, etc.), use the NVD CPE path. Find CPE identifiers at https://nvd.nist.gov/products/cpe."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.343098-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.343098-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JoAQcnirS6eOTpPcD72n2Q=="
+				},
+				"code" : "\"Change the CPE to check your native dependency.\"\nGt4SecurityNvdClient new\n\tcvesForVirtualCpe: 'cpe:2.3:a:openssl:openssl'\n\tlimit: 50"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.357362-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.357362-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OUSiGYUlTVKcavEDXZVrDQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Quick malicious-only check\n\nIf you just want to know \"is this package name malicious?\", the `queryMaliciousEcosystem:package:` convenience returns only the MAL-* entries. An empty result = clean (in OSSF's database). Non-empty = confirmed malicious."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.36124-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.36124-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ujaiDZu+T2ahlmnsIuR1+w=="
+				},
+				"code" : "\"Returns only malicious-package reports (MAL-*). Empty = clean.\"\n{\n\t'axios' -> (Gt4SecurityOsvClient new queryMaliciousEcosystem: 'npm' package: 'axios') size.\n\t'lodash' -> (Gt4SecurityOsvClient new queryMaliciousEcosystem: 'npm' package: 'lodash') size.\n\t'libidn2' -> (Gt4SecurityOsvClient new queryMaliciousEcosystem: 'npm' package: 'libidn2') size.\n}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.368265-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:53:34.368265-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YwxoJTSlSUapHSsWzUCNtw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Key takeaways\n\n1. **OSV covers npm, Maven, PyPI, Pub (Flutter), crates.io** with both CVEs and MAL records. Best for managed dependencies.\n2. **NVD covers native C/C++ libs via CPE** (OpenSSL, SQLite, libcurl, libwebp). Best for bundled native code.\n3. **Some mobile-relevant SDKs are not in any CVE database** — Pushwoosh, Mintegral, X-Mode, Igexin were policy/privacy violations, not code vulnerabilities. These require threat intelligence feeds, not vulnerability APIs.\n4. **iOS Swift/CocoaPods ecosystem has poor OSV coverage** — Alamofire, AFNetworking, and most Swift packages are not queryable. Apple's security advisories are the authoritative source but have no JSON API.\n5. **The `malicious` filter catches supply chain attacks** that traditional CVE queries miss — typosquats, backdoored packages, protestware. Always check both CVEs and MAL records."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:35.507199-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:35.507199-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "215d8DqlSrWCxydwExBUNA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Additional high-value libraries (verified live)\n\nResearch uncovered several more trackable libraries with significant CVE histories:"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:35.52037-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:35.52037-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KlYfRiGNR5a+/Yx6mjyZ9Q=="
+				},
+				"code" : "| view |\rview := GtPhlowColumnedListView new.\rview items: [ {\r  { 'Jackson Databind'. 'Maven'. 'OSV'. '69'. 'Ubiquitous Android JSON deserialization; 100+ deserialization gadget CVEs over its lifetime' }.\r  { 'Bouncy Castle'. 'Maven'. 'OSV'. '23'. 'Primary third-party crypto lib for Android apps (bcprov-jdk15on); CVE-2020-28052 auth bypass, CVE-2023-33201 LDAP injection' }.\r  { 'ua-parser-js'. 'npm'. 'OSV'. '5'. 'User-agent parsing lib; 7M weekly downloads; 2021 account hijack published cryptominer/stealer' }.\r  { 'XZ Utils'. 'NVD CPE'. 'NVD'. '4'. 'CVE-2024-3094: 2-year social engineering supply chain backdoor targeting SSH; caught days before widespread deployment' }.\r  { 'libpng'. 'NVD CPE'. 'NVD'. '5+'. 'Image decoding; multiple historic buffer overflows; bundled in image processing chains on mobile' }.\r  { 'colors'. 'npm'. 'OSV'. '2'. '2022 maintainer self-sabotaged (infinite loop protestware); broke thousands of RN/Cordova builds' }.\r  { 'faker'. 'npm'. 'OSV'. '1'. 'Same incident as colors — maintainer protest, injected destructive code' }\r} ].\rview column: 'Library' text: [ :row | row at: 1 ] weight: 1.2.\rview column: 'Ecosystem' text: [ :row | row at: 2 ] weight: 0.8.\rview column: 'Source' text: [ :row | row at: 3 ] weight: 0.5.\rview column: 'CVEs' text: [ :row | row at: 4 ] weight: 0.4.\rview column: 'Mobile relevance' text: [ :row | row at: 5 ] weight: 2.5.\rview asElement",
+				"elementHeight" : 260,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:54.855647-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:54.855647-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dC0lBO3nRkGI9uolFiqGEg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Additional malicious SDK incidents (2022-2024)\n\nResearch uncovered several more confirmed incidents not in our original table:"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:54.863896-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T09:54:54.863896-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mEbGugWETFu2Gb4USp+q/Q=="
+				},
+				"code" : "| view |\rview := GtPhlowColumnedListView new.\rview items: [ {\r  { 'SpinOk'. '2023'. 'Android'. 'Marketing SDK with spyware capabilities — exfiltrated files, clipboard data. Found in 100+ Play Store apps, 421M+ installs. Dr.Web discovery.' }.\r  { 'Goldoson'. '2023'. 'Android'. 'Third-party library performing ad click fraud and harvesting WiFi/Bluetooth/GPS data. Found in 60+ apps, 100M downloads. McAfee discovery.' }.\r  { 'Measurement Systems (Coulus Coelib)'. '2022'. 'Android'. 'SDK harvesting phone numbers, email, GPS, clipboard, scanning home networks. Linked to US intelligence contractors. Found in prayer and utility apps. AppCensus discovery.' }.\r  { 'CocoaPods Trunk vulns'. '2024'. 'iOS'. '1,870 orphaned pods claimable by anyone; RCE on Trunk server; zero-click account takeover. Exposed 3M+ iOS/macOS apps for ~10 years. CVE-2024-38366/38367/38368.' }.\r  { 'XZ Utils backdoor'. '2024'. 'Linux/Android'. 'Maintainer spent 2 years gaining trust, then inserted SSH backdoor. CVE-2024-3094. Caught by Andres Freund days before reaching stable distros.' }.\r  { 'Polyfill.io CDN'. '2024'. 'Mobile web'. 'Domain acquired by new owner who injected malicious redirects targeting mobile users via the JavaScript polyfill CDN. 100K+ sites affected.' }.\r  { 'colors / faker'. '2022'. 'RN / Cordova'. 'Maintainer self-sabotaged: injected infinite loops (colors) and destructive code (faker) as ''protestware''. Broke thousands of CI/CD pipelines.' }.\r  { 'BatMobi'. '2019'. 'Android'. 'Ad SDK with dormant code activation — turned clean apps into adware overnight. Pre-installed on some Xiaomi devices.' }\r} ].\rview column: 'Name' text: [ :row | row at: 1 ] weight: 1.2.\rview column: 'Year' text: [ :row | row at: 2 ] weight: 0.5.\rview column: 'Platform' text: [ :row | row at: 3 ] weight: 0.6.\rview column: 'What happened' text: [ :row | row at: 4 ] weight: 3.5.\rview asElement",
+				"elementHeight" : 300,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:13.711837-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:13.711837-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LG8420tiTg6gWgx/u+C9vg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Live: Incident catalog (non-CVE threats)\n\nThese 21 incidents are **not tracked in NVD or OSV** — they're policy violations, espionage, supply chain compromises, and SDK backdoors catalogued from threat research. The catalog is built from {{gtClass:Gt4SecurityIncidentExamples}} and lives entirely offline (no API calls).\n\nClick any row to drill into the incident details. Use the **By category**, **By platform**, and **Timeline** tabs for rollups. Filter chains work: `catalog android category: 'supply chain'`."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:21.405797-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:21.405797-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "L2ScY5A/RLeR0AsVREVDqQ=="
+				},
+				"exampleSelector" : "catalog",
+				"previewHeight" : 450,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "Gt4SecurityIncidentExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:29.545719-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:29.545719-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1ADbc9QVQNiPbfedfM4zjw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Filter the catalog interactively"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:29.558724-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-12T10:18:29.558724-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Wqy6MkshTWiM6NOr5zy5WA=="
+				},
+				"code" : "\"Try: android, ios, category: 'supply chain', matching: 'engagelab', year: 2024\"\nGt4SecurityIncidentExamples new catalog android category: 'supply chain'"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-12T09:51:47.258138-04:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-04-12T09:51:47.258138-04:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Gt4Security — Mobile SDK & Library Tracker"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "eb142497-7c45-47e2-98f8-7d2965a5ff50"
+	}
+}

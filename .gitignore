@@ -1,0 +1,4 @@
+*.bak
+.claude
+.DS_Store
+plans
