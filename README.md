@@ -71,6 +71,19 @@ Chain filters and keep the views:
     matching: 'kernel'.
 ```
 
+## Ask an AI about the data
+
+Glamorous Toolkit's built-in LLM chat ("Chat about this object" in the
+inspector) works on Gt4Security objects. The model reads the same custom views
+you use, such as Summary, By severity, By score and Vulnerabilities. It can also
+evaluate code against the vulnerability objects to check its reasoning. Its
+answer links back to the live objects, so you can click any cited ID to inspect
+it.
+
+![AI chat triaging a query result through its views](docs/images/ai-chat.png)
+
+## More views
+
 | | |
 |---|---|
 | ![Daily trend chart](docs/images/trend-chart.png) **Trend chart:** vulnerabilities per day across 6,700+ advisories. | ![Strategy narrative](docs/images/strategy-narrative.png) **Strategies:** how the bulk feed was fetched, with call counts, bytes and time. |
